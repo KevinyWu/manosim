@@ -1,0 +1,16 @@
+name: manosim
+channels:
+  - conda-forge
+  - pip
+dependencies:
+  - python=3.10
+  - pip
+  - git
+  - pre-commit
+  - pyyaml
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cpu
+    - torch==2.9.1+cpu
+    - tyro
+    - mjviser
+    - git+https://github.com/lixiny/manotorch.git@a2a70c5

@@ -1,0 +1,162 @@
+<mujoco model="mano_hand">
+  <compiler autolimits="true" angle="radian"/>
+  <default>
+    <geom solimp="0.5 0.95 0.001" solref="0.04 1"/>
+  </default>
+  <asset>
+    <mesh name="mano_bone_0" file="meshes/mano_bone_0.obj"/>
+    <mesh name="mano_bone_1" file="meshes/mano_bone_1.obj"/>
+    <mesh name="mano_bone_2" file="meshes/mano_bone_2.obj"/>
+    <mesh name="mano_bone_3" file="meshes/mano_bone_3.obj"/>
+    <mesh name="mano_bone_4" file="meshes/mano_bone_4.obj"/>
+    <mesh name="mano_bone_5" file="meshes/mano_bone_5.obj"/>
+    <mesh name="mano_bone_6" file="meshes/mano_bone_6.obj"/>
+    <mesh name="mano_bone_7" file="meshes/mano_bone_7.obj"/>
+    <mesh name="mano_bone_8" file="meshes/mano_bone_8.obj"/>
+    <mesh name="mano_bone_9" file="meshes/mano_bone_9.obj"/>
+    <mesh name="mano_bone_10" file="meshes/mano_bone_10.obj"/>
+    <mesh name="mano_bone_11" file="meshes/mano_bone_11.obj"/>
+    <mesh name="mano_bone_12" file="meshes/mano_bone_12.obj"/>
+    <mesh name="mano_bone_13" file="meshes/mano_bone_13.obj"/>
+    <mesh name="mano_bone_14" file="meshes/mano_bone_14.obj"/>
+    <mesh name="mano_bone_15" file="meshes/mano_bone_15.obj"/>
+  </asset>
+  <worldbody>
+    <body name="mano_body_0" pos="0 0 0">
+      <joint name="wrist_tx" type="slide" axis="1 0 0" pos="0 0 0" limited="false" damping="5.0"/>
+      <joint name="wrist_ty" type="slide" axis="0 1 0" pos="0 0 0" limited="false" damping="5.0"/>
+      <joint name="wrist_tz" type="slide" axis="0 0 1" pos="0 0 0" limited="false" damping="5.0"/>
+      <joint name="wrist_rot" type="ball" pos="0 0 0" limited="false" damping="5.0" armature="0.01"/>
+      <inertial pos="0.0386409 -0.00291493 0.000663152" mass="0.303712" fullinertia="2.043050e-04 4.256486e-04 3.219984e-04 1.802327e-05 -1.893711e-06 -3.803063e-07"/>
+      <geom type="mesh" mesh="mano_bone_0" pos="0.0431646 -0.00558931 -0.00523476" rgba="0.902 0.302 0.800 1" priority="1" solimp="0.005 0.9 0.025 0.5 2"/>
+    <body name="mano_body_1" pos="0.119194 -0.00254749 0.024576">
+      <joint name="mano_joint_1" type="ball" pos="-0.0203719 -0.0028744 -0.00143131" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="0.000650446 0.000798635 0.000200566" mass="0.00941339" fullinertia="5.379398e-07 1.069968e-06 1.122376e-06 -2.196253e-08 2.903590e-08 8.062197e-09"/>
+      <geom type="mesh" mesh="mano_bone_1" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_2" pos="0.0306123 0.000539373 0.000874409">
+      <joint name="mano_joint_2" type="ball" pos="-0.0138451 0.000793704 -0.000179285" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.000973822 0.000468247 -0.00057189" mass="0.0047437" fullinertia="2.030256e-07 3.159512e-07 2.913437e-07 2.235354e-08 2.079174e-08 2.948350e-09"/>
+      <geom type="mesh" mesh="mano_bone_2" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_3" pos="0.0291722 -0.00310751 -0.00263645">
+      <joint name="mano_joint_3" type="ball" pos="-0.0174654 0.00160471 0.00133648" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00442339 0.000324665 0.000625425" mass="0.00333969" fullinertia="9.323459e-08 2.178530e-07 2.025120e-07 1.191903e-08 1.172349e-08 -7.213671e-09"/>
+      <geom type="mesh" mesh="mano_bone_3" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    </body>
+    </body>
+    </body>
+    <body name="mano_body_4" pos="0.124442 -0.000139222 -0.0068353">
+      <joint name="mano_joint_4" type="ball" pos="-0.0186127 -0.00154596 0.00348779" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00274065 0.00082817 0.000296873" mass="0.0106076" fullinertia="6.523338e-07 1.527096e-06 1.414520e-06 -2.742873e-08 1.897804e-07 1.429932e-09"/>
+      <geom type="mesh" mesh="mano_bone_4" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_5" pos="0.0331107 -0.00134688 -0.00628183">
+      <joint name="mano_joint_5" type="ball" pos="-0.016878 0.00138927 0.00338027" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.0019061 0.000658834 0.000525462" mass="0.00435413" fullinertia="1.802651e-07 2.664821e-07 2.571500e-07 2.980058e-08 1.676241e-08 -1.096303e-08"/>
+      <geom type="mesh" mesh="mano_bone_5" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_6" pos="0.0280938 -0.00120461 -0.00578484">
+      <joint name="mano_joint_6" type="ball" pos="-0.0187847 0.00019159 0.00396835" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.0031141 -0.000563042 0.00107531" mass="0.00308171" fullinertia="8.889449e-08 1.776768e-07 1.634168e-07 -5.136913e-09 2.052758e-08 -2.908080e-09"/>
+      <geom type="mesh" mesh="mano_bone_6" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    </body>
+    </body>
+    </body>
+    <body name="mano_body_7" pos="0.0884595 -0.0119999 -0.0556313">
+      <joint name="mano_joint_7" type="ball" pos="-0.00897066 -0.000350363 0.00860772" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="0.000219792 0.000973793 0.000465115" mass="0.00491129" fullinertia="2.512347e-07 3.246094e-07 2.776610e-07 -1.199495e-08 5.668034e-08 6.928058e-09"/>
+      <geom type="mesh" mesh="mano_bone_7" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_8" pos="0.0218642 0.000516577 -0.0131604">
+      <joint name="mano_joint_8" type="ball" pos="-0.0105048 -0.000454326 0.00724242" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00111329 0.000648706 -3.10612e-05" mass="0.00346773" fullinertia="1.346070e-07 1.970846e-07 1.739070e-07 1.523068e-08 3.585639e-08 -1.625947e-08"/>
+      <geom type="mesh" mesh="mano_bone_8" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_9" pos="0.0224935 -0.0038644 -0.0130908">
+      <joint name="mano_joint_9" type="ball" pos="-0.0135928 0.00166207 0.00773736" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00239558 -2.19941e-05 0.00119521" mass="0.00201688" fullinertia="5.095045e-08 8.466450e-08 7.027480e-08 3.199931e-09 1.495411e-08 -2.544482e-09"/>
+      <geom type="mesh" mesh="mano_bone_9" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    </body>
+    </body>
+    </body>
+    <body name="mano_body_10" pos="0.105235 -0.000629523 -0.0301149">
+      <joint name="mano_joint_10" type="ball" pos="-0.0129402 -0.00359201 0.00118619" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="0.000615076 0.000568741 -0.000282795" mass="0.00834476" fullinertia="4.969998e-07 8.420704e-07 8.242538e-07 -1.938774e-08 1.188858e-07 7.615593e-09"/>
+      <geom type="mesh" mesh="mano_bone_10" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_11" pos="0.0330519 -0.00110442 -0.0108127">
+      <joint name="mano_joint_11" type="ball" pos="-0.0138325 0.00131702 0.00481639" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.000787256 0.000550953 -0.000204251" mass="0.00588668" fullinertia="2.704928e-07 5.566225e-07 5.392724e-07 6.734781e-08 9.185454e-08 -2.420566e-08"/>
+      <geom type="mesh" mesh="mano_bone_11" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_12" pos="0.0317688 -0.00208961 -0.0104287">
+      <joint name="mano_joint_12" type="ball" pos="-0.0176497 0.000148789 0.00582745" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00317242 -0.000296141 0.00126585" mass="0.00318595" fullinertia="9.350457e-08 2.084433e-07 1.842844e-07 -7.087288e-09 3.662927e-08 -1.923017e-09"/>
+      <geom type="mesh" mesh="mano_bone_12" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    </body>
+    </body>
+    </body>
+    <body name="mano_body_13" pos="0.0355526 -0.024274 0.0456698">
+      <joint name="mano_joint_13" type="ball" pos="-0.00818481 0.00584787 -0.0161819" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00218132 0.00241989 -0.000937875" mass="0.01654" fullinertia="1.936354e-06 2.851294e-06 2.828340e-06 1.135377e-07 -2.756857e-07 -5.459116e-07"/>
+      <geom type="mesh" mesh="mano_bone_13" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_14" pos="0.0293024 0.00426279 0.0218863">
+      <joint name="mano_joint_14" type="ball" pos="-0.0142681 0.00269821 -0.0103901" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00165057 0.000565656 -0.00056142" mass="0.00826524" fullinertia="5.127106e-07 7.948754e-07 7.956173e-07 5.647792e-08 -7.568239e-08 3.570627e-08"/>
+      <geom type="mesh" mesh="mano_bone_14" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    <body name="mano_body_15" pos="0.0320468 -0.00857623 0.0188136">
+      <joint name="mano_joint_15" type="ball" pos="-0.0202924 0.00505324 -0.013195" limited="false" damping="0.01" armature="0.001"/>
+      <inertial pos="-0.00594992 0.00153621 -0.00332825" mass="0.00812965" fullinertia="5.808422e-07 9.351375e-07 8.317538e-07 1.075249e-07 -2.537960e-07 9.336305e-08"/>
+      <geom type="mesh" mesh="mano_bone_15" pos="0 0 0" rgba="0.902 0.302 0.800 1"/>
+    </body>
+    </body>
+    </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="wrist_motor_tx" joint="wrist_tx" kp="300.0" dampratio="1.0"/>
+    <position name="wrist_motor_ty" joint="wrist_ty" kp="300.0" dampratio="1.0"/>
+    <position name="wrist_motor_tz" joint="wrist_tz" kp="300.0" dampratio="1.0"/>
+    <position name="wrist_motor_rx" joint="wrist_rot" gear="1 0 0" kp="50.0" dampratio="1.5"/>
+    <position name="wrist_motor_ry" joint="wrist_rot" gear="0 1 0" kp="50.0" dampratio="1.5"/>
+    <position name="wrist_motor_rz" joint="wrist_rot" gear="0 0 1" kp="50.0" dampratio="1.5"/>
+    <position name="mano_motor_1_x" joint="mano_joint_1" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_1_y" joint="mano_joint_1" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_1_z" joint="mano_joint_1" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_2_x" joint="mano_joint_2" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_2_y" joint="mano_joint_2" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_2_z" joint="mano_joint_2" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_3_x" joint="mano_joint_3" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_3_y" joint="mano_joint_3" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_3_z" joint="mano_joint_3" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_4_x" joint="mano_joint_4" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_4_y" joint="mano_joint_4" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_4_z" joint="mano_joint_4" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_5_x" joint="mano_joint_5" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_5_y" joint="mano_joint_5" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_5_z" joint="mano_joint_5" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_6_x" joint="mano_joint_6" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_6_y" joint="mano_joint_6" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_6_z" joint="mano_joint_6" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_7_x" joint="mano_joint_7" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_7_y" joint="mano_joint_7" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_7_z" joint="mano_joint_7" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_8_x" joint="mano_joint_8" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_8_y" joint="mano_joint_8" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_8_z" joint="mano_joint_8" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_9_x" joint="mano_joint_9" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_9_y" joint="mano_joint_9" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_9_z" joint="mano_joint_9" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_10_x" joint="mano_joint_10" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_10_y" joint="mano_joint_10" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_10_z" joint="mano_joint_10" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_11_x" joint="mano_joint_11" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_11_y" joint="mano_joint_11" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_11_z" joint="mano_joint_11" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_12_x" joint="mano_joint_12" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_12_y" joint="mano_joint_12" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_12_z" joint="mano_joint_12" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_13_x" joint="mano_joint_13" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_13_y" joint="mano_joint_13" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_13_z" joint="mano_joint_13" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_14_x" joint="mano_joint_14" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_14_y" joint="mano_joint_14" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_14_z" joint="mano_joint_14" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_15_x" joint="mano_joint_15" gear="1 0 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_15_y" joint="mano_joint_15" gear="0 1 0" kp="30.0" dampratio="1.0"/>
+    <position name="mano_motor_15_z" joint="mano_joint_15" gear="0 0 1" kp="30.0" dampratio="1.0"/>
+  </actuator>
+</mujoco>

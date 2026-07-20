@@ -1,0 +1,45 @@
+# Outputs land under assets/<name>/mano_{r,l}hand/.
+name: zerohand
+
+# Optional inline 10 MANO shape params. Overrides shape_file. null -> fall through.
+# Example: shape: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+shape: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+# Optional shape file. 
+# If both shape and shape_file are null, the mean hand (zeros shape) is used.
+shape_file: assets/mano_rhand_shape.npy
+
+build:
+  total_mass_kg: 0.4
+  capsule_radius_pct: 50.0
+  # Per-bone capsule-radius percentile override. Bone 13 (thumb metacarpal)
+  # bleeds into palm vertices via LBS argmax so its 50-pct radius bloats.
+  capsule_radius_pct_overrides:
+    13: 20.0
+  mesh_hand_color: [230, 77, 204]
+  capsule_hand_color: [0, 255, 102]
+  # Global default contact params applied to all geoms via <default><geom/>.
+  default_geom:
+    solimp: "0.5 0.95 0.001"
+    solref: "0.04 1"
+  # Palm-only override. Higher priority lets the palm's softer solimp win
+  # over the default mix for palm-vs-object contacts.
+  palm_contact:
+    priority: 1
+    solimp: "0.005 0.9 0.025 0.5 2"
+  # Position-actuator gains. dampratio=1 -> MuJoCo auto-derives critically
+  # damped PD from the connected body inertia.
+  actuator:
+    wrist_trans_kp: 300.0
+    wrist_rot_kp: 50.0
+    finger_kp: 30.0
+    dampratio: 1.0
+    # Overdamp wrist rotation.
+    wrist_rot_dampratio: 1.5
+  # Per-joint damping (on top of actuator damping).
+  joint:
+    wrist_trans_damping: 5.0
+    wrist_rot_damping: 5.0
+    wrist_rot_armature: 0.01
+    finger_damping: 0.01
+    finger_armature: 1.0e-3
