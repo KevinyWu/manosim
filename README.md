@@ -57,6 +57,10 @@ python -m manosim.build_mjcf --config config/zerohand.yaml
 python -m manosim.visualize_hand --config config/zerohand.yaml
 ```
 
+**A note on solver parameters**
+
+Simulating human hands with rigid-body physics is difficult, since human hands have soft tissue and are naturally compliant. Two [solver parameters](https://mujoco.readthedocs.io/en/stable/modeling.html#solver-parameters), `solimp` and `solref`, are particularly important for making the hand feel realistic. In our work [Human Universal Grasping](https://grasping.io/), we selected `solimp: "0.5 0.95 0.001"` (with an even softer palm `solimp: "0.005 0.9 0.025"`) and `solref: "0.04 1"`, softer than the MuJoCo defaults of `"0.9 0.95 0.001"` and `"0.02 1"`. We determined these by replaying recorded human demonstrations, which serve as ground truth: a grasp a human performed should also succeed in simulation. These parameters show a high sim/real correlation, which was the desired outcome. However, you may observe that the hand sometimes penetrates objects. To counter this, you could make the hand very stiff with `solimp: "0.99 0.9999 0.0005"` and `solref: "0.004 1"`, which reduces interpenetration but at a large cost to sim/real correlation (only ~45% of recorded human grasps succeeded with this stiff hand, compared to >90% with the parameters we selected).
+
 ## Hand and Wrist Conventions
 
 <table align="center">
